@@ -12,7 +12,7 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 43px;
   margin-bottom: 100px;
 }
 
@@ -22,6 +22,7 @@ main {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: "wght" 400;
 }
 
 .header {
@@ -29,7 +30,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin: 112px auto 86px;
+  margin: 112px auto 88px;
   border: 2px solid var(--main-color);
   padding-block: clamp(7.625rem, 7.4489rem + 0.7512vw, 8.125rem);
   color: var(--main-color);
@@ -40,12 +41,12 @@ main {
 }
 
 .header__title {
-  font-weight: var(--main-font-weight);
+  font-weight: var(--title-font-weight);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header__subtitle {
-  font-weight: var(--main-font-weight);
+  font-weight: var(--title-font-weight);
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 }
 
@@ -60,19 +61,20 @@ main {
   padding: 4px 10px;
   font-family: var(--main-font);
   font-size: 18px;
-  font-variation-settings: "wght" var(--main-font-weight);
+  font-variation-settings: "wght" var(--title-font-weight);
 }
 
 .card__text {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   color: var(--main-color);
   font-weight: 410;
   font-size: 18px;
   line-height: 117%;
+  font-family: var(--main-font);
 }
 
 .card__content {
-  padding: 25px;
+  padding: 26px;
 }
 
 .card__text:last-child {
@@ -88,11 +90,13 @@ main {
 
 .card__image-wrapper {
   position: relative;
-  border-block: 1px solid var(--main-color);
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
 }
 
 .card__label {
   position: absolute;
+  z-index: 1;
   top: 25px;
   right: 25px;
   opacity: 0.5;
@@ -116,8 +120,17 @@ main {
 }
 
 .card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  margin-right: 2px;
+}
+
+.card__icon-button:focus-visible {
   border: none;
   background-color: transparent;
+  border: 2px solid #000;
+  outline: 0;
+  gap: 7px; 
 }
 
 .like-icon {
@@ -149,6 +162,11 @@ main {
   inline-size: 130px;
 }
 
+.btn:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color);
+  outline: none;
+}
+
 .btn::after {
   content: "";
   position: absolute;
@@ -161,6 +179,7 @@ main {
   transform: translateX(-100%);
   inline-size: 100%;
   block-size: 100%;
+  border: 2px solid transparent;
 }
 
 
@@ -265,9 +284,9 @@ dialog:not([open]) {
   pointer-events: none;
 }
 
-@media (width < 768px) {
+@media (width < 376px) {
   .header {
-    margin: 100px auto 97px;
+    margin: 98px auto 99px;
   }
 
   .card__content {
@@ -280,7 +299,7 @@ dialog:not([open]) {
 
   .floppy-button {
     flex-direction: column;
-    padding-block: 17px;
+    padding-block: 18px;
     max-inline-size: 306px;
   }
 
