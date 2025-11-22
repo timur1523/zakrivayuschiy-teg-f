@@ -4,7 +4,7 @@
   --accent-font: 'PressStart2P', fantasy;
   --title-font-weight: 785;
   --text-font-weight: 400;
-  --main-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --main-inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);;
   --main-color: #000;
   --bg-color: #fff;
   --animation-color: #FF0000;
